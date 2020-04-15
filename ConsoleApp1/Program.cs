@@ -49,4 +49,7 @@ select to_days('2020-04-01');  # 737881
 alter table logdb.log PARTITION BY RANGE (to_days(CreateTime))(PARTITION p20200401 VALUES LESS THAN (to_days('2020-04-20')));
 
 ALTER TABLE logdb.log ADD PARTITION (PARTITION p20200501 VALUES LESS THAN (to_days('2020-05-01')));
+
+
+    show global variables like "%datadir%";
  */
